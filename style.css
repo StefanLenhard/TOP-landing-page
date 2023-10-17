@@ -1,12 +1,14 @@
 body {
-font-family: sans-serif;
+font-family: Arial, Helvetica, sans-serif;
 display: flex;
 flex-direction: column;
 height: 100vh;
 margin:-8px -8px;
+box-sizing: border-box;
 }
 
-button {
+
+.hero-button {
     background-color: #3882f6;
     color: white;
     padding: 5px 20px;
@@ -19,7 +21,7 @@ button {
     justify-content: space-between;
     background-color: #1f2937;
     align-items: center;
-    padding: 10px 30px;
+    padding: 10px 50px;
 }
 
 .logo {
@@ -42,30 +44,46 @@ button {
 .hero {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    align-items: center;
     background-color: #1f2937;
     color: #f9faf8;
     padding: 40px;
     flex: 1;
+
+
+}
+.hero-container {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    gap: 16px;
+    flex: 1;
 }
 
 .awesome-container {
-    width: 400px;
+max-width: 400px;
 }
 
 .hero-headline {
     font-size: 48px;
     color:#f9faf8;
-    margin-bottom: -10px;
 }
 
 .img-ph {
-    width: 300px;
+    max-width: 400px;
     background-color: darkgray;
     padding: 50px;
-    text-align: center;
     color: #1f2937;
-    align-self: center;
+    align-self: stretch;
+    flex: 1;
+    justify-self: center;
+    text-align: center;
+}
+
+.container-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .box-headline {
@@ -76,10 +94,11 @@ button {
 .box-container {
     display:flex;
     justify-content: center;
+    align-items: center;
     gap: 50px;
     margin: 0px 150px;
     flex-wrap: wrap;
-    flex: 1;
+    padding: 15px
 }
 .box {
     width: 100px;
@@ -105,20 +124,26 @@ button {
     
 }
 
+.container-quote {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+    max-width: 700px;
+}
+
 .quote-text {
     font-size: 36px;
     color: #1f2937; 
     font-style: italic;
     align-self: center;
     justify-content: center;
-    min-width: 100px;
-    max-width: 700px;
+
 }
 
 .quote-by {
-   text-align: right;
-   font-weight: bold;
-   margin-top: -20px;
+    text-align: right;
+    font-weight: bold;
+    align-self: flex-end;
 
 }
 
@@ -138,9 +163,21 @@ button {
     height: 75px;
     align-items: center;
     justify-content: center;
-    border-radius: 10px
+    border-radius: 10px;
+    gap: 50px;
     
+
 }
+
+.cta-button {
+    background-color: #3882f6;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+
 
 .footer {
     background-color: #1f2937;
